@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Contoh Dua Objek pada Satu Marker</title>
+    <!-- Pustaka A-Frame -->
+    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+    <!-- Pustaka AR.js untuk A-Frame -->
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <style>
+      body { margin: 0; overflow: hidden; }
+    </style>
+  </head>
+  <body>
+    <a-scene embedded arjs>
+      <!-- Marker preset 'hiro' -->
+      <a-marker preset="hiro">
+        <!-- Kotak 3D berwarna ungu -->
+        <a-box position="-0.5 0.5 0" rotation="0 45 0" color="#800080"></a-box>
+        <!-- Bola 3D berwarna pink -->
+        <a-sphere position="0.5 0.5 0" radius="0.25" color="#FFC0CB"></a-sphere>
+      </a-marker>
+      <!-- Kamera AR -->
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
